@@ -8,4 +8,4 @@ Desarrollo de Aplicaciones
 - Leyva Valencia
 - Luis Torres
 >
->  *Proyecto Apartado Cañpnes* 
+>  *Proyecto Apartado Cañones* 
