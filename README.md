@@ -4,7 +4,7 @@ Desarrollo de Aplicaciones
 ***
 >
 >
-- Cab Gonzales
+- Cab González
 - Leyva Valencia
 - Luis Torres
 >
