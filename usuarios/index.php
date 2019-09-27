@@ -1,6 +1,6 @@
 <?php 
-require_once 'includes/funciones.php';
-require_once 'includes/db.php';
+require_once '../includes/funciones.php';
+require_once '../includes/db.php';
  ?>
 
  <!--
@@ -22,7 +22,7 @@ Si la session no existe, redireccionar al login.
 	
 	<nav class="navbar navbar-dark bg-dark">
 		 <a class="navbar-brand" href="#">
-    <img src="img/logo.svg" width="30" height="30" alt="">
+    <img src="../img/logo.svg" width="30" height="30" alt="">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -56,92 +56,39 @@ Si la session no existe, redireccionar al login.
     </form>
   </div>
 	</nav>
-		<!--<div id="contenedor-principal">
-    <table>
-      <thead>
-        <tr>
-          <th>Matricula</th>
-          <th>Nombre</th>
-          <th>Teléfono</th>
-          <th>Correo Electronico</th>
-          <th>Nivel</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php 
-
-//Cuando se consulta varios registros se utiliza select
-$usuarios = $db->select("usuarios","*",["AND" =>["usr_status" => 1, "usr_nivel" => 2]]);
-
-//$row = $db->get("usuarios","*",["usr_id" => 6]); Se utiliza get cuando es un solo registro exclusivo.
-foreach ($usuarios as $usuario => $row) {
- ?>
-        <tr>
-          <td><?php echo $row['usr_matricula']; ?></td>
-          <td><?php echo $row['usr_nombre']; ?></td>
-          <td><?php echo $row['usr_telefono']; ?></td>
-          <td><?php echo $row['usr_correo']; ?></td>
-          <td><?php echo $row['usr_nivel']; ?></td>
-        </tr>
-        <?php
-
-        }
-
-        ?>
-      </tbody>
-    </table>
-    </div>
-	</section>-->
-<!--<div class="table-responsive">
-  <table class="table table-sm">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Edier </td>
-      <td>Cab</td>
-      <td>@ediCab</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Maximiliano</td>
-      <td>Leyva</td>
-      <td>@VelociMax</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Luis</td>
-      <td>Torres</td>
-      <td>@Luisfertg</td>
-    </tr>
-  </tbody>
-</table>
-</div>
--->
+<section>
+  
+</section>
 <table class="table table-dark">
   <thead>
     <tr>
       <th scope="col">ID</th>
+      <th scope="col">MATRICULA</th>
       <th scope="col">NOMBRE</th>
+      <th scope="col">TELEFONO</th>
+      <th scope="col">CORREO</th>
+      <th scope="col">NIVEL</th>
       <th scope="col">STATUS</th>
+      <th scope="col">PASSWORD</th>
+    </tr>
   </thead>
   <tbody>
-      <?php 
-  $usuarios = $db->select("canones","*");
+  <?php 
 
-  foreach ($usuarios as $usuario => $row) {
+        $usuarios = $db->select("usuarios","*");
+
+        foreach ($usuarios as $usuario => $row) {
    ?>
    <tr>
       <td><?php echo $row['id']; ?></td>
+      <td><?php echo $row['matricula']; ?></td>
       <td><?php echo $row['nombre']; ?></td>
-      <td><?php echo $row['status']; ?></td>
+      <td><?php echo $row['telefono']; ?></td>
+    
+    <td><?php echo $row['correo']; ?></td>
+    <td><?php echo $row['nivel']; ?></td>
+    <td><?php echo $row['status']; ?></td>
+    <td><?php echo $row['password']; ?></td>
   </tr>
           <?php 
         }
@@ -149,7 +96,7 @@ foreach ($usuarios as $usuario => $row) {
        ?>
   </tbody>
 </table>
-<div>
+
 	<footer>
 		<p align="center"><i class="fas fa-user-lock"></i>Sistema de Cañones</p>
 	</footer>
