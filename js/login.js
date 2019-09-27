@@ -13,7 +13,7 @@ $("form").find("input").map(function(i, e){
 	});
       //console.log(obj);
 		$.post("includes/funciones.php", obj, function(respuesta){
-			//alert(respuesta.texto);
+			alert(respuesta.texto);
 			//Si el estatus es 0 enviar mensajes de datos incorrectos, intente de nuevo
 			//Si el estatus es 1, redireccionar al index.
 		}, "JSON");
