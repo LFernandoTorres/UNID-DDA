@@ -125,7 +125,7 @@ foreach ($usuarios as $usuario => $row) {
 </table>
 </div>
 -->
-<table class="table table-dark">
+<table class="table">
   <thead>
     <tr>
       <th scope="col">ID</th>

@@ -16,7 +16,7 @@ Si la session no existe, redireccionar al login.
 	<meta charset="UTF-8">
 	<title>Sistema apartado de cañones</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
 	
