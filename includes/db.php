@@ -2,7 +2,7 @@
 // Using Medoo namespace
 use Medoo\Medoo;
  
-$server = ($_SERVER['HTTP_HOST'] == "smoothoperators.com.mx") ? "smoothoperators.com.mx" : "smoothoperators.com.mx" ;
+$server = ($_SERVER['HTTP_HOST'] == "localhost") ? "smoothoperators.com.mx" : "localhost" ;
 
 // Initialize
 $db = new Medoo([

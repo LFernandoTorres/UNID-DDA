@@ -59,7 +59,7 @@ Si la session no existe, redireccionar al login.
 <section>
   
 </section>
-<table class="table table-dark">
+<table class="table">
   <thead>
     <tr>
       <th scope="col">ID</th>
